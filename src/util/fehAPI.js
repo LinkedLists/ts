@@ -1,4 +1,4 @@
-const apiURL = "https://rickandmortyapi.com/api/character/";
+const apiURL = "https://raw.githubusercontent.com/ajhyndman/fire-emblem-working-title/master/packages/fire-emblem-heroes-stats/stats.json";
 
 const fetchRequest = {
     fetchData: async () => {
