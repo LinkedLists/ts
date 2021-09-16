@@ -1,27 +1,24 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import RickandMortyAPI from '../util/r&mAPI'
 
-class Main extends React.Component {
-  constructor(props) {
-    super(props)
+function Main() {
 
-    this.state = {
+  const [state, setState] = useState( 
+    RickandMortyAPI.fetchData().then(res => {return res})
+  )
 
-    }
-  }
+  useEffect( () => {
+    // setState(RickandMortyAPI.fetchData())
+  })
 
-  componentDidMount() {
-    RickandMortyAPI.fetchData().then(res => {
-      console.log(res)
-    })
-  }
+  
 
-  render() {
-    return(
-      <div className="main-container">
-      </div>
-    )
-  }
+  return(
+    <div className="main-container">
+      {console.log(state)}
+      <button onClick={ () => {console.log(state)}} />
+    </div>
+  )
 }
 
 export default Main
