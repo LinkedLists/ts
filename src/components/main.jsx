@@ -1,18 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import RickandMortyAPI from '../util/r&mAPI'
+import SearchBar from './searchBar'
 
 function Main() {
-  // function setData(res) {
-  //   setState(res)
-  // }
-  
-  // const [state, setState] = useState( () => {
-    //   RickandMortyAPI.fetchData().then(res => {
-      //     setData(res)
-      //   })
-  // })
-      
+
   const [state, setState] = useState(null)
+  const [searchInput, setSearchInput] = useState(null)
 
   useEffect( () => {
     console.log("fetching")
@@ -23,8 +16,9 @@ function Main() {
 
   return(
     <div className="main-container">
-      {console.log(state)}
-      <button onClick={ () => {console.log(state.results)}} />
+      {console.log(searchInput)}
+      <SearchBar setSearchInput={setSearchInput} />
+      <button onClick={ () => {console.log(searchInput)}} />
     </div>
   )
 }
