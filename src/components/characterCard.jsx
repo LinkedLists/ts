@@ -4,9 +4,7 @@ function CharacterCard(props) {
 
   const {card} = props
   return (
-    <div>
-      {card}
-    </div>
+    <img src={card.image} alt="img" />
   )
 }
 

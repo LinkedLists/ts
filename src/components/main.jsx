@@ -6,7 +6,7 @@ import CharacterCard from './characterCard';
 function Main() {
 
   const [state, setState] = useState(null)
-  const [searchInput, setSearchInput] = useState(null)
+  const [searchInput, setSearchInput] = useState("")
 
   useEffect( () => {
     RickandMortyAPI.fetchData().then(res => {
@@ -14,11 +14,17 @@ function Main() {
     })
   }, [])
 
+  function search() {
+    if (searchInput) {
+
+    }
+  }
+
   function renderCards() {
     if (state && state.results.length) {
       let cards = state.results
       return cards.map( card => {
-        <CharacterCard card={card} />
+        return <CharacterCard card={card} />
       })
     } else {
       return null
