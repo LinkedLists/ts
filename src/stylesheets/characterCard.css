@@ -1,0 +1,16 @@
+.card-list-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card-container {
+  height: 350px;
+  width: 280px;
+}
+
+.card-avatar {
+  width: 200px;
+  height: 200px;
+}

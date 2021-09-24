@@ -35,7 +35,10 @@ function Main() {
     <div className="main-container">
       <SearchBar setSearchInput={setSearchInput} />
       <button onClick={ () => {console.log(state.results[1])}} />
-      {renderCards()}
+
+      <div className="card-list-container">
+        {renderCards()}
+      </div>
     </div>
   )
 }

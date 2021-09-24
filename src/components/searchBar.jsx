@@ -5,7 +5,7 @@ function SearchBar(props) {
   const {setSearchInput} = props
 
   return (
-    <input placeholder="Enter some text" onChange={ e => setSearchInput(e.target.value) }/>
+    <input className="search-bar" placeholder="Enter some text" onChange={ e => setSearchInput(e.target.value) }/>
   )
 }
 
