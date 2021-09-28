@@ -27,7 +27,7 @@ function CharacterCard(props) {
     <div className="card-container">
       {console.log(card)}
       <img className="card-avatar"src={card.image} alt="img" />
-      <h4 className="character-name">{card.name}</h4>
+      <h3 className="character-name">{card.name}</h3>
 
       <div className="character-info">
         <div className="left-info">
