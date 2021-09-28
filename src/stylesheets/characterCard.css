@@ -26,10 +26,15 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: left;
 }
 
 .right-info {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+
+.status {
+  padding: 3px 5px;
 }

@@ -3,12 +3,32 @@ import PropTypes from 'prop-types';
 function CharacterCard(props) {
 
   const {card} = props
+
+  function setStatusColor() {
+    if (card.status === 'Alive') {
+      return {
+        background: 'green',
+        color: 'white'
+      }
+    }
+    else if (card.status === 'Dead') {
+      return {
+        background: 'red'
+      }
+    } else {
+      return {
+        background: 'grey',
+        color: 'white'
+      }
+    }
+  }
+
   return (
     <div className="card-container">
       {console.log(card)}
       <img className="card-avatar"src={card.image} alt="img" />
       <h4 className="character-name">{card.name}</h4>
-      
+
       <div className="character-info">
         <div className="left-info">
           <div className="origin">Origin {card.origin.name}</div>
@@ -16,7 +36,7 @@ function CharacterCard(props) {
           <div className="loca">Location {card.location.name}</div>
         </div>
         <div className="right">
-          <div className="status">{card.status}</div>
+          <div className="status" style={setStatusColor()}>{card.status}</div>
         </div>
       </div>
     </div>
