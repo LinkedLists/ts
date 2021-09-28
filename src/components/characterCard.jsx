@@ -8,6 +8,17 @@ function CharacterCard(props) {
       {console.log(card)}
       <img className="card-avatar"src={card.image} alt="img" />
       <h4 className="character-name">{card.name}</h4>
+      
+      <div className="character-info">
+        <div className="left-info">
+          <div className="origin">Origin {card.origin.name}</div>
+          <div className="species">{card.species}</div>
+          <div className="loca">Location {card.location.name}</div>
+        </div>
+        <div className="right">
+          <div className="status">{card.status}</div>
+        </div>
+      </div>
     </div>
   )
 }
@@ -26,6 +37,9 @@ function CharacterCard(props) {
 // status: "Dead"
 // type: ""
 // url: "https://rickandmortyapi.com/api/character/9"
+
+// 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
+
 // *********************************
 
 
