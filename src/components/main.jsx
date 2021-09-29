@@ -14,15 +14,23 @@ function Main() {
     })
   }, [])
 
-  function search() {
-    if (searchInput) {
-
+  function sortBySearch() {
+    let name = ""
+    let characters = [...state.results]
+    if (searchInput.length > 0) {
+      characters = characters.filter( character => {
+        name = character.name.toLowerCase()
+        return name.includes(searchInput)
+      })
     }
+
+    return characters
   }
 
   function renderCards() {
     if (state && state.results.length) {
-      let cards = state.results
+      // let cards = state.results
+      let cards = sortBySearch()
       return cards.map( card => {
         return <CharacterCard card={card} />
       })
@@ -34,7 +42,7 @@ function Main() {
   return(
     <div className="main-container">
       <SearchBar setSearchInput={setSearchInput} />
-      <button onClick={ () => {console.log(state.results[1])}} />
+      {/* <button onClick={ () => {console.log(state.results[1])}} /> */}
 
       <div className="card-list-container">
         {renderCards()}

@@ -57,9 +57,6 @@ function CharacterCard(props) {
 // status: "Dead"
 // type: ""
 // url: "https://rickandmortyapi.com/api/character/9"
-
-// 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
-
 // *********************************
 
 
