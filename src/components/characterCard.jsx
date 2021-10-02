@@ -25,15 +25,15 @@ function CharacterCard(props) {
 
   return (
     <div className="card-container">
-      {console.log(card)}
+      {/* {console.log(card)} */}
       <img className="card-avatar"src={card.image} alt="img" />
       <h3 className="character-name">{card.name}</h3>
 
       <div className="character-info">
         <div className="left-info">
-          <div className="origin">Origin {card.origin.name}</div>
+          <div className="origin">Origin - {card.origin.name}</div>
           <div className="species">{card.species}</div>
-          <div className="loca">Location {card.location.name}</div>
+          <div className="loca">Location - {card.location.name}</div>
         </div>
         <div className="right">
           <div className="status" style={setStatusColor()}>{card.status}</div>
