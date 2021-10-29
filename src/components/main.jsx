@@ -11,16 +11,14 @@ function Main() {
   useEffect( () => {
     RickandMortyAPI.fetchData().then(res => {
       setState(res)
-      // console.log(res)
     })
   }, [])
 
   function sortBySearch() {
     let name = ""
-    let characters = [...state]
-    // console.log(state)
+    let characters = []
     if (searchInput.length > 0) {
-      characters = characters.filter( character => {
+      characters = state.filter( character => {
         name = character.name.toLowerCase()
         return name.includes(searchInput)
       })
@@ -30,13 +28,10 @@ function Main() {
   }
 
   function renderCards() {
-    // console.log(state)
     if (state) {
-    // if (state && state.results.length) {
-      // let cards = state.results
       let cards = sortBySearch()
       return cards.map( card => {
-        return <CharacterCard card={card} />
+        return <CharacterCard key={Math.random()} card={card} />
       })
     } else {
       return null

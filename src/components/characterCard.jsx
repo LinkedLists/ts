@@ -25,7 +25,6 @@ function CharacterCard(props) {
 
   return (
     <div className="card-container">
-      {/* {console.log(card)} */}
       <img className="card-avatar"src={card.image} alt="img" />
       <h3 className="character-name">{card.name}</h3>
 
